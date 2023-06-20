@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Projeto {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println("Bem-vindo(a) ao Rex criminis");
+            System.out.println("Bem-vindo(a) ao Rex criminous");
             System.out.println("Você é um jovem prestes a entrar no mundo do crime");
             System.out.println("Faça suas escolhas com sabedoria e se torne rei ou rainha do crime!");
             System.out.println("------------------------------------------------------------------------");
@@ -15,7 +15,7 @@ public class Projeto {
             System.out.println("Quando chegam no local, Peter quer desistir. O que você faz?");
             System.out.println("a) O convence a continuar, pois essa é a melhor chance para vocês");
             System.out.println("b) Deixa ele voltar para casa e faz o assalto sozinho");
-            System.out.println("c) Você chama ele de covarde e começam uma discussão");
+            System.out.println("c) Você chama ele de covarde e começam uma briga");
             String choice = scanner.nextLine();
 
             switch (choice.toLowerCase()) {
