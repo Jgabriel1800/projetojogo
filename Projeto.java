@@ -7,7 +7,7 @@ public class Projeto {
             System.out.println("Você é um jovem prestes a entrar no mundo do crime");
             System.out.println("Faça suas escolhas com sabedoria e se torne rei ou rainha do crime!");
             System.out.println("------------------------------------------------------------------------");
-            System.out.println("Seu nome é John, você mora em Chigado na década de 50, sua família é de origem humilde, então decide entrar para o mundo do crime");
+            System.out.println("Seu nome é John, você mora em Chigado na década de 40, sua família é de origem humilde, então decide entrar para o mundo do crime");
             System.out.println("Esse mundo não é fácil, é muito cruel, então saiba fazer suas escolhas com cuidado ou vai se arrepender!");
             System.out.println("------------------------------------------------------------------------");
             System.out.println("Você vai para o seu primeiro roubo de carga à noite e decide chamar seu melhor amigo, Peter, para ir com você");
@@ -69,6 +69,6 @@ public class Projeto {
             }
         }
         System.out.println("------------------------------------------------------------------------");
-        System.out.println("Acabou o primeiro capítulo de muitos que ainda vêm por aí!!");
+        System.out.println("Finalizou o primeiro capítulo de muitos que ainda vêm por aí!!");
     }
 }
