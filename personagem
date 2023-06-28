@@ -1,0 +1,61 @@
+public class Personagem {
+    private String nome;
+    private int habilidade;
+    private int experiencia;
+
+    public Personagem(String nome) {
+        this.nome = nome;
+        this.habilidade = 0;
+        this.experiencia = 0; // Atribui valor zero à experiência
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getHabilidade() {
+        return habilidade;
+    }
+
+    public void setHabilidade(int habilidade) {
+        this.habilidade = habilidade;
+    }
+
+    public int getExperiencia() {
+        return experiencia;
+    }
+
+    public void setExperiencia(int experiencia) {
+        this.experiencia = experiencia;
+    }
+
+    public void aumentarHabilidade(int pontos) {
+        habilidade += pontos;
+    }
+
+    public void diminuirHabilidade(int pontos) {
+        habilidade -= pontos;
+        if (habilidade < 0) {
+            habilidade = 0;
+        }
+    }
+
+    public void aumentarExperiencia(int pontos) {
+        experiencia += pontos; // Aumenta a experiência pelo valor especificado
+    }
+
+    public void diminuirExperiencia(int pontos) {
+        experiencia -= pontos; // Diminui a experiência pelo valor especificado
+        if (experiencia < 0) {
+            experiencia = 0;
+        }
+    }
+}
+
+
+
+
