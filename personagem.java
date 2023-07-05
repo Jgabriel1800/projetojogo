@@ -1,9 +1,9 @@
-public class Personagem {
+public class personagem {
     private String nome;
     private int habilidade;
     private int experiencia;
 
-    public Personagem(String nome) {
+    public personagem(String nome) {
         this.nome = nome;
         this.habilidade = 0;
         this.experiencia = 0; // Atribui valor zero à experiência
@@ -35,6 +35,9 @@ public class Personagem {
 
     public void aumentarHabilidade(int pontos) {
         habilidade += pontos;
+        if (habilidade > 100) {
+            habilidade = 100;
+        }
     }
 
     public void diminuirHabilidade(int pontos) {
@@ -55,7 +58,3 @@ public class Personagem {
         }
     }
 }
-
-
-
-
