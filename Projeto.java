@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Projeto {
     public static void main(String[] args) {
         try (Scanner resposta = new Scanner(System.in)) {
-            System.out.println("Bem-vindo(a) ao Futegame! Seja um jogador de verdade junto com seu amigo Bruno" +
+            System.out.println("Bem-vindo(a) ao Futegame! Seja um jogador de verdade junto com seu amigo " +
                     " e crie sua carreira rumo ao estrelato." +
                     " Agora me diga como irá se chamar a próxima estrela?");
             personagem jogador = new personagem(resposta.nextLine());
@@ -11,7 +11,7 @@ public class Projeto {
 
             String cap1 = "Tudo certo, " + jogador.getNome() + "! Agora uma decisão importante." +
                     " Você recebeu propostas de dois diferentes times. Escolha um:";
-            String cap2 = "Você escolheu o Náutico! Seu amigo " + amigo + " irá para o Sport. Agora, você deseja treinar ou descansar no Náutico?";
+            String cap2 = "Você escolheu o Náutico! Seu amigo " + amigo.getNome() + " irá para o Sport. Agora, você deseja treinar ou descansar no Náutico?";
             String cap3 = "Você escolheu treinar no Náutico. Bom treino!" +
                     " Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol." +
                     " Em qual lado você chuta?";
@@ -45,17 +45,16 @@ public class Projeto {
             capitulo capitulo1 = new capitulo(cap1, escolha1cap1, escolha2cap1, jogador, 0);
             capitulo capitulo2 = new capitulo(cap2, escolha1cap2, escolha2cap2, jogador, 0);
             capitulo capitulo3 = new capitulo(cap3, escolha1cap3, escolha2cap3, jogador, 5);
-            capitulo capitulo4 = new capitulo(cap4, null, null, jogador, 5);
-            capitulo capitulo5 = new capitulo(cap5, null, null, jogador, 0);
-            capitulo capitulo6 = new capitulo(cap6, null, null, jogador, 0);
-            capitulo capitulo7 = new capitulo(cap7, null, null, jogador, 0);
+            capitulo capitulo4 = new capitulo(cap4, "", "", jogador, 10);
+            capitulo capitulo5 = new capitulo(cap5, "", "", jogador, 0);
+            capitulo capitulo6 = new capitulo(cap6, "", "", jogador, 0);
+            capitulo capitulo7 = new capitulo(cap7, "", "", jogador, 0);
             capitulo capitulo8 = new capitulo(cap8, escolha1cap8, escolha2cap8, jogador, 0);
-            capitulo capitulo9 = new capitulo(cap9, escolha1cap9, escolha2cap9, jogador, 5);
-            capitulo capitulo10 = new capitulo(cap10, null, null, jogador, 5);
-            capitulo capitulo11 = new capitulo(cap11, null, null, jogador, 0);
-            capitulo capitulo12 = new capitulo(cap12, null, null, jogador, 0);
- //---------------------------------------------------------------------------------------------------------           
-
+            capitulo capitulo9 = new capitulo(cap9, escolha1cap9, escolha2cap9, jogador, 10);
+            capitulo capitulo10 = new capitulo(cap10, "", "", jogador, 5);
+            capitulo capitulo11 = new capitulo(cap11, "", "", jogador, 0);
+            capitulo capitulo12 = new capitulo(cap12, "", "", jogador, 0);
+            
             capitulo1.mostrarCapitulo();
             int valor = capitulo1.escolha();
             if (valor == 1) {
@@ -65,14 +64,11 @@ public class Projeto {
                     capitulo3.mostrarCapitulo();
                     int valor3 = capitulo3.escolha();
                     if (valor3 == 1) {
-                        System.out.println("Sua habilidade é: " + jogador.getHabilidade());
                         capitulo4.mostrarCapitulo();
                     } else {
-                        System.out.println("Sua habilidade é: " + jogador.getHabilidade());
                         capitulo5.mostrarCapitulo();
                     }
                 } else {
-                    System.out.println("Sua habilidade é: " + jogador.getHabilidade());
                     capitulo6.mostrarCapitulo();
                 }
             } else if (valor == 2) {
@@ -82,21 +78,18 @@ public class Projeto {
                     capitulo9.mostrarCapitulo();
                     int valor9 = capitulo9.escolha();
                     if (valor9 == 1) {
-                        System.out.println("Sua habilidade é: " + jogador.getHabilidade());
                         capitulo10.mostrarCapitulo();
                     } else {
-                        System.out.println("Sua habilidade é: " + jogador.getHabilidade());
                         capitulo11.mostrarCapitulo();
                     }
                 } else {
-                    System.out.println("Sua habilidade é: " + jogador.getHabilidade());
                     capitulo12.mostrarCapitulo();
                 }
             } else {
-                System.out.println("Sua habilidade é: " + jogador.getHabilidade());
                 capitulo7.mostrarCapitulo();
             }
+            
+            jogador.mostrarHabilidade();  // Exibe a habilidade atual do jogador após a tomada de decisão
         }
-        
     }
 }

@@ -32,7 +32,7 @@ public class capitulo {
             if (input.equalsIgnoreCase("b")) {
                 return 2;
             } else {
-                System.out.println("Você optou por uma opção que não existe");
+                System.out.println("Você optou por uma opção que não existe, tente novamente");
             }
         }
     }

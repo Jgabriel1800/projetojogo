@@ -35,10 +35,20 @@ public class personagem {
 
     public void aumentarHabilidade(int pontos) {
         habilidade += pontos;
+        
         if (habilidade > 100) {
             habilidade = 100;
         }
+    
     }
+     public void mostrarHabilidade() {
+        System.out.println("Sua habilidade é de: " + habilidade);
+    }
+    public void mostrarHabilidademomento() {
+    if (habilidade > 0) {
+        System.out.println("Sua habilidade é de: " + habilidade);
+    }
+}
 
     public void diminuirHabilidade(int pontos) {
         habilidade -= pontos;
@@ -48,11 +58,11 @@ public class personagem {
     }
 
     public void aumentarExperiencia(int pontos) {
-        experiencia += pontos; // Aumenta a experiência pelo valor especificado
+        experiencia += pontos; 
     }
 
     public void diminuirExperiencia(int pontos) {
-        experiencia -= pontos; // Diminui a experiência pelo valor especificado
+        experiencia -= pontos; 
         if (experiencia < 0) {
             experiencia = 0;
         }
