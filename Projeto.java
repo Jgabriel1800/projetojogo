@@ -27,11 +27,11 @@ public class Projeto {
                     " Em qual lado você chuta?";
             String cap10 = "Gooool! Você chutou no lado esquerdo e marcou para o Sport!";
             String cap11 = "Chute para fora! Você chutou no lado errado e não marcou, seu time não foi campeão";
-            String cap12 = "Você escolheu descansar no Sport. Aproveite o descanso!" +
+            String cap12 = "Você escolheu descansar no Sport Recife. Aproveite o descanso!" +
                     " Você ficou no banco e viu seu time ser derrotado sem você";
             
 
-            String escolha1cap1 = "a) Náutico";
+            String escolha1cap1 = "a) Nautico";
             String escolha2cap1 = "b) Sport";
             String escolha1cap2 = "a) Treinar";
             String escolha2cap2 = "b) Descansar";
@@ -89,7 +89,7 @@ public class Projeto {
                 capitulo7.mostrarCapitulo();
             }
             
-            jogador.mostrarHabilidade();  // Exibe a habilidade atual do jogador após a tomada de decisão
+            
         }
     }
 }

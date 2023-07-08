@@ -39,32 +39,30 @@ public class personagem {
         if (habilidade > 100) {
             habilidade = 100;
         }
+    }
     
+    public void mostrarHabilidade() {
+        System.out.println("Sua habilidade atual é: " + habilidade);
     }
-     public void mostrarHabilidade() {
-        System.out.println("Sua habilidade é de: " + habilidade);
-    }
-    public void mostrarHabilidademomento() {
-    if (habilidade > 0) {
-        System.out.println("Sua habilidade é de: " + habilidade);
-    }
-}
 
     public void diminuirHabilidade(int pontos) {
         habilidade -= pontos;
+        
         if (habilidade < 0) {
             habilidade = 0;
         }
     }
 
     public void aumentarExperiencia(int pontos) {
-        experiencia += pontos; 
+        experiencia += pontos;
     }
 
     public void diminuirExperiencia(int pontos) {
-        experiencia -= pontos; 
+        experiencia -= pontos;
+        
         if (experiencia < 0) {
             experiencia = 0;
         }
     }
 }
+
