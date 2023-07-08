@@ -5,8 +5,9 @@ public class Projeto {
         try (Scanner resposta = new Scanner(System.in)) {
             System.out.println("Bem-vindo(a) ao Futegame! Seja um jogador de verdade junto com seu amigo " +
                     " e crie sua carreira rumo ao estrelato." +
-                    " Agora me diga como irá se chamar a próxima estrela?");
+                    " Agora me diga como irá se chamar a próxima estrela:");
             personagem jogador = new personagem(resposta.nextLine());
+            System.out.println("Qual será o nome do seu melhor amigo:");
             personagem amigo = new personagem(resposta.nextLine());
 
             String cap1 = "Tudo certo, " + jogador.getNome() + "! Agora uma decisão importante." +
@@ -29,7 +30,7 @@ public class Projeto {
             String cap11 = "Chute para fora! Você chutou no lado errado e não marcou, seu time não foi campeão";
             String cap12 = "Você escolheu descansar no Sport Recife. Aproveite o descanso!" +
                     " Você ficou no banco e viu seu time ser derrotado sem você";
-            
+
 
             String escolha1cap1 = "a) Nautico";
             String escolha2cap1 = "b) Sport";
@@ -43,18 +44,18 @@ public class Projeto {
             String escolha2cap9 = "b) Direito";
 
             capitulo capitulo1 = new capitulo(cap1, escolha1cap1, escolha2cap1, jogador, 0);
-            capitulo capitulo2 = new capitulo(cap2, escolha1cap2, escolha2cap2, jogador, 0);
-            capitulo capitulo3 = new capitulo(cap3, escolha1cap3, escolha2cap3, jogador, 5);
-            capitulo capitulo4 = new capitulo(cap4, "", "", jogador, 10);
+            capitulo capitulo2 = new capitulo(cap2, escolha1cap2, escolha2cap2, jogador, 5);
+            capitulo capitulo3 = new capitulo(cap3, escolha1cap3, escolha2cap3, jogador, 10);
+            capitulo capitulo4 = new capitulo(cap4, "", "", jogador, 0);
             capitulo capitulo5 = new capitulo(cap5, "", "", jogador, 0);
             capitulo capitulo6 = new capitulo(cap6, "", "", jogador, 0);
             capitulo capitulo7 = new capitulo(cap7, "", "", jogador, 0);
-            capitulo capitulo8 = new capitulo(cap8, escolha1cap8, escolha2cap8, jogador, 0);
+            capitulo capitulo8 = new capitulo(cap8, escolha1cap8, escolha2cap8, jogador, 5);
             capitulo capitulo9 = new capitulo(cap9, escolha1cap9, escolha2cap9, jogador, 10);
-            capitulo capitulo10 = new capitulo(cap10, "", "", jogador, 5);
+            capitulo capitulo10 = new capitulo(cap10, "", "", jogador, 0);
             capitulo capitulo11 = new capitulo(cap11, "", "", jogador, 0);
             capitulo capitulo12 = new capitulo(cap12, "", "", jogador, 0);
-            
+
             capitulo1.mostrarCapitulo();
             int valor = capitulo1.escolha();
             if (valor == 1) {
@@ -65,6 +66,7 @@ public class Projeto {
                     int valor3 = capitulo3.escolha();
                     if (valor3 == 1) {
                         capitulo4.mostrarCapitulo();
+                        jogador.aumentarHabilidade(10); // Adiciona 10 na habilidade ao fazer um gol
                     } else {
                         capitulo5.mostrarCapitulo();
                     }
@@ -79,6 +81,7 @@ public class Projeto {
                     int valor9 = capitulo9.escolha();
                     if (valor9 == 1) {
                         capitulo10.mostrarCapitulo();
+                        jogador.aumentarHabilidade(10); 
                     } else {
                         capitulo11.mostrarCapitulo();
                     }
@@ -88,8 +91,8 @@ public class Projeto {
             } else {
                 capitulo7.mostrarCapitulo();
             }
-            
-            
+
+             
         }
     }
 }
