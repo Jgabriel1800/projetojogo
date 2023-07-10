@@ -6,7 +6,7 @@ public class personagem {
     public personagem(String nome) {
         this.nome = nome;
         this.habilidade = 0;
-        this.experiencia = 0; // Atribui valor zero à experiência
+        this.experiencia = 0; 
     }
 
     public String getNome() {
