@@ -13,7 +13,7 @@ public class Projeto {
 
         String cap1 = "Tudo certo, " + jogador.getNome() + "! Agora uma decisão importante." +
                 " Você recebeu propostas de dois diferentes times. Escolha um:";
-        String cap2 = "Você escolheu o Náutico! Seu amigo " + amigo.getNome() + " irá para o Sport."+ 
+        String cap2 = "Você escolheu o Náutico! Seu amigo " + amigo.getNome() + " irá para o Sport."+
         "Agora, você deseja treinar ou descansar no Náutico?";
         String cap3 = "Você escolheu treinar no Náutico. Bom treino!" +
                 " Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol." +
