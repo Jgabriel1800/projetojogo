@@ -33,60 +33,42 @@ public class Projeto {
         String cap12 = "Você escolheu descansar no Sport Recife. Aproveite o descanso!" +
                 " Você ficou no banco e viu seu time ser derrotado sem você";
 
-        String[] escolhasCap1 = {"Náutico", "Sport"};
-        String[] escolhasCap2 = {"Treinar", "Descansar"};
-        String[] escolhasCap3 = {"Esquerdo", "Direito"};
-        String[] escolhasCap8 = {"Treinar", "Descansar"};
-        String[] escolhasCap9 = {"Esquerdo", "Direito"};
+        capitulo capitulo1 = new capitulo(cap1, jogador, 0);
+        capitulo capitulo2 = new capitulo(cap2, jogador, 5);
+        capitulo capitulo3 = new capitulo(cap3, jogador, 10);
+        capitulo capitulo4 = new capitulo(cap4, jogador, 0);
+        capitulo capitulo5 = new capitulo(cap5, jogador, 0);
+        capitulo capitulo6 = new capitulo(cap6, jogador, 0);
+        capitulo capitulo7 = new capitulo(cap7, jogador, 0);
+        capitulo capitulo8 = new capitulo(cap8, jogador, 5);
+        capitulo capitulo9 = new capitulo(cap9, jogador, 15);
+        capitulo capitulo10 = new capitulo(cap10, jogador, 0);
+        capitulo capitulo11 = new capitulo(cap11, jogador, 0);
+        capitulo capitulo12 = new capitulo(cap12, jogador, 0);
 
-        capitulo capitulo1 = new capitulo(cap1, escolhasCap1, jogador, 0);
-        capitulo capitulo2 = new capitulo(cap2, escolhasCap2, jogador, 5);
-        capitulo capitulo3 = new capitulo(cap3, escolhasCap3, jogador, 10);
-        capitulo capitulo4 = new capitulo(cap4, new String[]{}, jogador, 0);
-        capitulo capitulo5 = new capitulo(cap5, new String[]{}, jogador, 0);
-        capitulo capitulo6 = new capitulo(cap6, new String[]{}, jogador, 0);
-        capitulo capitulo7 = new capitulo(cap7, new String[]{}, jogador, 0);
-        capitulo capitulo8 = new capitulo(cap8, escolhasCap8, jogador, 5);
-        capitulo capitulo9 = new capitulo(cap9, escolhasCap9, jogador, 10);
-        capitulo capitulo10 = new capitulo(cap10, new String[]{}, jogador, 0);
-        capitulo capitulo11 = new capitulo(cap11, new String[]{}, jogador, 0);
-        capitulo capitulo12 = new capitulo(cap12, new String[]{}, jogador, 0);
+        escolha escolha1 = new escolha("Náutico", capitulo2);
+        escolha escolha2 = new escolha("Sport", capitulo8);
+        capitulo1.adicionarEscolhas(new escolha[]{escolha1, escolha2});
 
-        capitulo1.mostrarCapitulo();
-        int valor = capitulo1.escolha();
-        if (valor == 0) {
-            capitulo2.mostrarCapitulo();
-            int valor2 = capitulo2.escolha();
-            if (valor2 == 0) {
-                capitulo3.mostrarCapitulo();
-                int valor3 = capitulo3.escolha();
-                if (valor3 == 0) {
-                    capitulo4.mostrarCapitulo();
-                    jogador.aumentarHabilidade(10);
-                } else {
-                    capitulo5.mostrarCapitulo();
-                }
-            } else {
-                capitulo6.mostrarCapitulo();
-            }
-        } else if (valor == 1) {
-            capitulo8.mostrarCapitulo();
-            int valor8 = capitulo8.escolha();
-            if (valor8 == 0) {
-                capitulo9.mostrarCapitulo();
-                int valor9 = capitulo9.escolha();
-                if (valor9 == 0) {
-                    capitulo10.mostrarCapitulo();
-                    jogador.aumentarHabilidade(10); 
-                } else {
-                    capitulo11.mostrarCapitulo();
-                }
-            } else {
-                capitulo12.mostrarCapitulo();
-            }
-        } else {
-            capitulo7.mostrarCapitulo();
-        }
+        escolha escolha3 = new escolha("Treinar", capitulo3);
+        escolha escolha4 = new escolha("Descansar", capitulo6);
+        capitulo2.adicionarEscolhas(new escolha[]{escolha3, escolha4});
+
+        escolha escolha5 = new escolha("Esquerdo", capitulo4);
+        escolha escolha6 = new escolha("Direito", capitulo5);
+        capitulo3.adicionarEscolhas(new escolha[]{escolha5, escolha6});
+
+        escolha escolha7 = new escolha("Treinar", capitulo9);
+        escolha escolha8 = new escolha("Descansar", capitulo12);
+        capitulo8.adicionarEscolhas(new escolha[]{escolha7, escolha8});
+
+        escolha escolha9 = new escolha("Esquerdo", capitulo10);
+        escolha escolha10 = new escolha("Direito", capitulo11);
+        capitulo9.adicionarEscolhas(new escolha[]{escolha9, escolha10});
+
+        capitulo raiz = capitulo1;
+        raiz.executar();
+
         resposta.close();
     }
 }
