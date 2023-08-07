@@ -6,48 +6,32 @@ public class personagem {
     public personagem(String nome) {
         this.nome = nome;
         this.habilidade = 0;
-        this.experiencia = 0; 
+        this.experiencia = 0;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public int getHabilidade() {
         return habilidade;
-    }
-
-    public void setHabilidade(int habilidade) {
-        this.habilidade = habilidade;
     }
 
     public int getExperiencia() {
         return experiencia;
     }
 
-    public void setExperiencia(int experiencia) {
-        this.experiencia = experiencia;
-    }
-
     public void aumentarHabilidade(int pontos) {
         habilidade += pontos;
-        
+
         if (habilidade > 100) {
             habilidade = 100;
         }
     }
-    
-    public void mostrarHabilidade() {
-        System.out.println("Sua habilidade atual é: " + habilidade);
-    }
 
     public void diminuirHabilidade(int pontos) {
         habilidade -= pontos;
-        
+
         if (habilidade < 0) {
             habilidade = 0;
         }
@@ -59,7 +43,7 @@ public class personagem {
 
     public void diminuirExperiencia(int pontos) {
         experiencia -= pontos;
-        
+
         if (experiencia < 0) {
             experiencia = 0;
         }

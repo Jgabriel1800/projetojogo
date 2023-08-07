@@ -13,8 +13,8 @@ public class Projeto {
 
         String cap1 = "Tudo certo, " + jogador.getNome() + "! Agora uma decisão importante." +
                 " Você recebeu propostas de dois diferentes times. Escolha um:";
-        String cap2 = "Você escolheu o Náutico! Seu amigo " + amigo.getNome() + " irá para o Sport."+
-        "Agora, você deseja treinar ou descansar no Náutico?";
+        String cap2 = "Você escolheu o Náutico! Seu amigo " + amigo.getNome() + " irá para o Sport." +
+                "Agora, você deseja treinar ou descansar no Náutico?";
         String cap3 = "Você escolheu treinar no Náutico. Bom treino!" +
                 " Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol." +
                 " Em qual lado você chuta?";
@@ -25,7 +25,7 @@ public class Projeto {
                 " Você ficou no banco e viu seu time ser campeão sem você";
         String cap7 = "Escolha inválida. Por favor, execute o programa novamente e escolha uma opção válida.";
         String cap8 = "Você escolheu o Sport! Agora, você deseja treinar ou descansar no Sport?";
-        String cap9 = "Você escolheu treinar no Sport!"+ amigo.getNome()+ "Bom treino!" +
+        String cap9 = "Você escolheu treinar no Sport!" + amigo.getNome() + "Bom treino!" +
                 " Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol." +
                 " Em qual lado você chuta?";
         String cap10 = "Gooool! Você chutou no lado esquerdo e marcou para o Sport!";

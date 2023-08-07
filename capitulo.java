@@ -12,17 +12,29 @@ public class capitulo {
         this.jogador = jogador;
         this.habilidade = habilidade;
     }
-    public void adicionarEscolhas(escolha[] escolhas) {
-        this.escolhas = escolhas;
+
+    public String getTexto() {
+        return texto;
     }
+
+    public int getHabilidade() {
+        return habilidade;
+    }
+
     public void mostrarCapitulo() {
         System.out.println(this.texto);
         for (int i = 0; i < escolhas.length; i++) {
-            System.out.println((char)('a' + i) + ") " + escolhas[i].getTexto());
+            System.out.println((char) ('a' + i) + ") " + escolhas[i].getTexto());
         }
         System.out.println("Habilidade atual: " + jogador.getHabilidade());
     }
-    public void escolher() {
+
+    public void executar() {
+        mostrarCapitulo();
+        escolher();
+    }
+
+    private void escolher() {
         while (true) {
             String input = scanner.nextLine();
             int opcao = input.toLowerCase().charAt(0) - 'a';
@@ -36,8 +48,8 @@ public class capitulo {
             }
         }
     }
-    public void executar() {
-        mostrarCapitulo();
-        escolher();
+
+    public void adicionarEscolhas(escolha[] escolhas) {
+        this.escolhas = escolhas;
     }
 }
