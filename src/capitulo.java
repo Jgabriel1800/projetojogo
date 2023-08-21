@@ -41,6 +41,10 @@ public class capitulo {
             if (opcao >= 0 && opcao < escolhas.length) {
                 escolha escolha = escolhas[opcao];
                 capitulo proximoCapitulo = escolha.getProximo();
+                
+                
+                jogador.aumentarHabilidade(proximoCapitulo.getHabilidade());
+                
                 proximoCapitulo.executar();
                 return;
             } else {

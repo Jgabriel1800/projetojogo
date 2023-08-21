@@ -1,0 +1,10 @@
+Nome:
+jogador
+habilidade:
+0
+
+Nome:
+amigo
+habilidade:
+0
+

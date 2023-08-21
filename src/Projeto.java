@@ -1,19 +1,24 @@
-import java.util.Scanner;
 
+import java.util.Map;
 public class Projeto {
-    public static void main(String[] args) {
-        Scanner resposta = new Scanner(System.in);
+public static void main(String[] args) {
+        
+        Leitordearquivo leitor= new Leitordearquivo();
 
+        Map<String, personagem> personagens = leitor.carregarpersonagens("rsc/personagem.txt");
+        
+        
         System.out.println("Bem-vindo(a) ao Futegame! Seja um jogador de verdade junto com seu amigo " +
-                " e crie sua carreira rumo ao estrelato." +
-                " Agora me diga como irá se chamar a próxima estrela?");
-        personagem jogador = new personagem(resposta.nextLine());
-        System.out.println("Qual será o nome do seu melhor amigo:");
-        personagem amigo = new personagem(resposta.nextLine());
+        " e crie sua carreira rumo ao estrelato.");
 
-        String cap1 = "Tudo certo, " + jogador.getNome() + "! Agora uma decisão importante." +
+        personagem jogador = new personagem(0);
+        
+        
+
+
+        String cap1 = "Tudo certo, Fernandinho ! Agora uma decisão importante." +
                 " Você recebeu propostas de dois diferentes times. Escolha um:";
-        String cap2 = "Você escolheu o Náutico! Seu amigo " + amigo.getNome() + " irá para o Sport." +
+        String cap2 = "Você escolheu o Náutico! Seu amigo Jimmy irá para o Sport." +
                 "Agora, você deseja treinar ou descansar no Náutico?";
         String cap3 = "Você escolheu treinar no Náutico. Bom treino!" +
                 " Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol." +
@@ -23,9 +28,8 @@ public class Projeto {
         String cap5 = "Chute para fora! Você chutou no lado errado e não marcou, seu time não foi campeão";
         String cap6 = "Você escolheu descansar no Náutico. Aproveite o descanso!" +
                 " Você ficou no banco e viu seu time ser campeão sem você";
-        String cap7 = "Escolha inválida. Por favor, execute o programa novamente e escolha uma opção válida.";
         String cap8 = "Você escolheu o Sport! Agora, você deseja treinar ou descansar no Sport?";
-        String cap9 = "Você escolheu treinar no Sport!" + amigo.getNome() + "Bom treino!" +
+        String cap9 = "Você escolheu treinar no Sport!Jimmy Bom treino!" +
                 " Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol." +
                 " Em qual lado você chuta?";
         String cap10 = "Gooool! Você chutou no lado esquerdo e marcou para o Sport!";
@@ -39,7 +43,6 @@ public class Projeto {
         capitulo capitulo4 = new capitulo(cap4, jogador, 0);
         capitulo capitulo5 = new capitulo(cap5, jogador, 0);
         capitulo capitulo6 = new capitulo(cap6, jogador, 0);
-        capitulo capitulo7 = new capitulo(cap7, jogador, 0);
         capitulo capitulo8 = new capitulo(cap8, jogador, 5);
         capitulo capitulo9 = new capitulo(cap9, jogador, 15);
         capitulo capitulo10 = new capitulo(cap10, jogador, 0);
@@ -49,6 +52,7 @@ public class Projeto {
         escolha escolha1 = new escolha("Náutico", capitulo2);
         escolha escolha2 = new escolha("Sport", capitulo8);
         capitulo1.adicionarEscolhas(new escolha[]{escolha1, escolha2});
+        
 
         escolha escolha3 = new escolha("Treinar", capitulo3);
         escolha escolha4 = new escolha("Descansar", capitulo6);
@@ -67,8 +71,15 @@ public class Projeto {
         capitulo9.adicionarEscolhas(new escolha[]{escolha9, escolha10});
 
         capitulo raiz = capitulo1;
+        System.out.println("Habilidade final:"+ jogador.getHabilidade());
         raiz.executar();
-
-        resposta.close();
+        
+       
     }
+
+
+private static Object gethabilidade() {
+        return null;}
 }
+
+
