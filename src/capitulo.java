@@ -1,59 +1,84 @@
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.Scanner;
 
 public class capitulo {
     private String texto;
-    private escolha[] escolhas;
+    private ArrayList<escolha> escolhas;
     private personagem jogador;
     private int habilidade;
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner escaneador;
 
-    public capitulo(String texto, personagem jogador, int habilidade) {
-        this.texto = texto;
-        this.jogador = jogador;
-        this.habilidade = habilidade;
+    protected capitulo() {
+        this.texto = "";
+        this.escolhas = new ArrayList<escolha>();
     }
-
-    public String getTexto() {
-        return texto;
+    public capitulo(Map<String, personagem> personagens, Scanner escaneadordoconsole, Scanner escaneadordearquivo)  {
+        this.LerCapitulo(personagens, escaneadordearquivo);
+        this.escaneador = escaneadordoconsole;
+        this.escolhas = new ArrayList<escolha>();
     }
+    protected void LerCapitulo(Map<String, personagem> personagens, Scanner escaneadordearquivo) {
+        escaneadordearquivo.nextLine();
+        String idjogador = escaneadordearquivo.nextLine();
+        this.jogador = personagens.get(idjogador);
 
-    public int getHabilidade() {
-        return habilidade;
-    }
-
-    public void mostrarCapitulo() {
-        System.out.println(this.texto);
-        for (int i = 0; i < escolhas.length; i++) {
-            System.out.println((char) ('a' + i) + ") " + escolhas[i].getTexto());
-        }
-        System.out.println("Habilidade atual: " + jogador.getHabilidade());
-    }
-
-    public void executar() {
-        mostrarCapitulo();
-        escolher();
-    }
-
-    private void escolher() {
-        while (true) {
-            String input = scanner.nextLine();
-            int opcao = input.toLowerCase().charAt(0) - 'a';
-            if (opcao >= 0 && opcao < escolhas.length) {
-                escolha escolha = escolhas[opcao];
-                capitulo proximoCapitulo = escolha.getProximo();
-                
-                
-                jogador.aumentarHabilidade(proximoCapitulo.getHabilidade());
-                
-                proximoCapitulo.executar();
-                return;
+        escaneadordearquivo.nextLine();
+        String linha = escaneadordearquivo.nextLine();
+        this.texto = "";
+        while (!linha.equals("VARIACOES")) {
+            if (linha.equals(idjogador)) {
+                texto = texto + jogador.getNome();
             } else {
-                System.out.println("Opção inválida. Por favor, tente novamente.");
+                texto = texto + linha;
+            }
+            linha = escaneadordearquivo.nextLine();
+        }
+        this.habilidade = Integer.parseInt(escaneadordearquivo.nextLine());
+    }
+    public void adicionarescolha(escolha escolha) {
+        escolhas.add(escolha);
+    }
+    public void executar() {
+        mostrar();
+        if (escolhas.size() > 0) {
+            int idcapituloescolhido = escolher();
+            System.out.println();
+            System.out.println(". . .");
+            System.out.println();
+            escolhas.get(idcapituloescolhido).getProximo().executar();
+        } else {
+            System.out.println("FIM");
+        }
+    }
+    protected void mostrar() {
+        System.out.println(texto);
+        jogador.ajustarhabilidade(habilidade);
+        for (int i = 0; i < escolhas.size(); i++) {
+            System.out.println("- " + escolhas.get(i).getTextoMostrado());
+        }
+    }
+    public int escolher() {
+        int opcaoescolhida = 0;
+    String escolha;
+    boolean escolhavalida = false;
+    while (!escolhavalida) {
+        escolha = escaneador.nextLine();
+        for (int i = 0; i < escolhas.size(); i++) {
+            if (escolha.equalsIgnoreCase(escolhas.get(i).getTextoDigitado())) {
+                escolhavalida = true;
+                opcaoescolhida = i;
             }
         }
+        if (!escolhavalida) {
+            System.out.println("Escolha inválida");
+        }
     }
-
-    public void adicionarEscolhas(escolha[] escolhas) {
-        this.escolhas = escolhas;
-    }
+    return opcaoescolhida;
+  }
 }
+
+
+
+
+

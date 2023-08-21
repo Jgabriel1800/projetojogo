@@ -1,10 +1,8 @@
-Nome:
 jogador
-habilidade:
+Fernandinho
 0
 
-Nome:
 amigo
-habilidade:
+Jimmy
 0
 

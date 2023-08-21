@@ -1,37 +1,43 @@
 public class personagem {
-
+    private String nome;
     private int habilidade;
-
     
-
-    public personagem( int habilidade) {
-        
+    public personagem( String nome,int habilidade) {
+        this.nome = nome;
         this.habilidade = habilidade;
         
     }
-
-    public int getHabilidade() {
-       return habilidade;
+    public personagem(String nome) {
+        this.nome = nome;
+        this.habilidade = 0;
     }
-
-    public void aumentarHabilidade(int pontos) {
-       habilidade += pontos;
-
-        if (habilidade > 100) {
-            habilidade = 100;
+    public void ajustarhabilidade(int variacao) {
+        if (variacao != 0) {
+          habilidade(this.habilidade + variacao);
+          System.out.println("a habilidade de " + this.nome + " foi para " + this.habilidade);
         }
-   }
-
-    public void diminuirHabilidade(int pontos) {
-        habilidade -= pontos;
-
-        if (habilidade < 0) {
-           habilidade = 0;
+    }
+    public void habilidade(int habilidade) {
+        this.habilidade = habilidade;
+        if (this.habilidade < 0) {
+           this.habilidade= 0;
         }
+    }
+    public int gethabilidade() {
+        return this.habilidade;
+    }
+    public String getNome() {
+        return this.nome;
     }
 }
 
-    
+
+
+
+
+
+
+
         
     
 

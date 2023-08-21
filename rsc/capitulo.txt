@@ -1,2 +1,182 @@
-novamente teste
- teste
+CAPITULO
+ID
+capitulo1
+PERSONAGENS
+TEXTO
+Bem-vindo(a) ao Futegame! Seja um jogador de verdade junto com seu amigo e crie sua carreira rumo ao estrelato.
+Tudo certo, Fernandinho! Agora uma decisão importante.
+Você recebeu propostas de dois diferentes times. Escolha um:
+escolhas:
+Náutico
+Sport
+
+CAPITULO 
+ID
+capitulo2
+Você escolheu o Náutico! Seu amigo Jimmy irá para o Sport.
+Agora, você deseja treinar ou descansar no Náutico?
+escolhas:
+Treinar
+Descansar
+
+CAPITULO
+ID
+Capitulo3
+Você escolheu treinar no Náutico. Bom treino!
+Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol.
+Em qual lado você chuta?
+escolhas:
+Esquerdo
+Direito
+
+CAPITULO
+ID
+Capitulo4
+Gooool! Você chutou no lado esquerdo e marcou para o Náutico!
+O Náutico foi campeão do Pernambucano.
+HABILIDADE
+15
+Capitulo5
+texto:
+Chute para fora! Você chutou no lado errado e não marcou, seu time não foi campeão.
+HABILIDADE
+5
+
+CAPITULO
+ID
+Capitulo6
+Você escolheu descansar no Náutico. Aproveite o descanso!
+Você ficou no banco e viu seu time ser campeão sem você.
+HABILIDADE
+0
+
+CAPITULO
+ID
+Capitulo7
+texto:
+Você escolheu o Sport! Agora, você deseja treinar ou descansar no Sport?
+escolhas:
+Treina
+Descansar,
+
+CAPITULO
+ID
+Capitulo8
+texto:
+Você escolheu treinar no Sport, Fernandinho! Bom treino!
+Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol.
+Em qual lado você chuta?
+escolhas:
+Esquerdo
+Direito
+
+CAPITULO
+ID
+Capitulo9
+texto:
+Gooool! Você chutou no lado esquerdo e marcou para o Sport!
+O Sport foi campeão do Pernambucano.
+HABILIDADE
+15
+
+CAPITULO
+ID
+Capitulo10
+Chute para fora! Você chutou no lado errado e não marcou, seu time não foi campeão.
+HABILIDADE
+5
+
+CAPITULO
+ID
+Capitulo11
+texto:
+Você escolheu descansar no Sport Recife. Aproveite o descanso!
+Você ficou no banco e viu seu time ser derrotado sem você.
+HABILIDADE
+0
+
+Escolha
+De
+capitulo1
+PARA
+capitulo2
+TEXTO DIGITADO
+a
+TEXTO MOSTRADO
+Nautico
+
+ESCOLHA 
+DE 
+capitulo1
+PARA 
+capitulo7
+TEXTO DIGITADO
+b
+TEXTO MOSTRADO
+Sport
+
+ESCOLHA 
+DE 
+capitulo2
+PARA
+capitulo3
+TEXTO DIGITADO
+a
+TEXTO MOSTRADO
+Treinar
+
+ESCOLHA
+DE 
+capitulo7
+PARA
+CAPITULO8
+TEXTO DIGITADO
+a
+TEXTO MOSTRADO
+Treinar
+
+ESCOLHA 
+DE
+capitulo3
+PARA
+capitulo4
+TEXTO DIGITADO
+a
+TEXTO MOSTRADO
+esquerdo
+
+ESCOLHA 
+DE
+capitulo8
+PARA
+capitulo9
+TEXTO DIGITADO
+a
+TEXTO MOSTRADO
+esquerdo
+
+ESCOLHA 
+DE
+capitulo3
+PARA
+capitulo5
+TEXTO DIGITADO
+a
+TEXTO MOSTRADO
+direito
+
+ESCOLHA
+DE
+capitulo8
+PARA
+capitulo10
+TEXTO DIGITADO
+b
+TEXTO MOSTRADO
+direito
+
+ESCOLHA 
+DE
+capitulo7
+PARA
+capitulo11

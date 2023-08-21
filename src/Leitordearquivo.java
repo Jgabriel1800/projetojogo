@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Leitordearquivo {
@@ -10,22 +11,18 @@ public class Leitordearquivo {
         File arquivo = new File(caminho);
 
         try {
-            Scanner escaneador = new Scanner(arquivo);
-
+            Scanner escaneador = new Scanner(arquivo,"UTF-8");
+            System.out.println("Carregando personagens...");
+            int i = 0;
             while (escaneador.hasNextLine()) {
-
-                escaneador.nextLine(); //nome:
-
-                String nome= escaneador.nextLine();
-
-                escaneador.nextLine(); //habilidade:
-
-                int habilidade= Integer.parseInt(escaneador.nextLine());
+                i++;
+                String id = escaneador.nextLine();
+                String nome = escaneador.nextLine();
+                int habilidade = Integer.parseInt(escaneador.nextLine());
                 
-                escaneador.nextLine();//\n
-
-
-                personagens.put(nome, new personagem(habilidade));
+                escaneador.nextLine();
+                System.out.println("Personagem " + i);
+                personagens.put(id, new personagem(nome, habilidade));  
             }
             
             escaneador.close();
@@ -36,5 +33,58 @@ public class Leitordearquivo {
         return personagens;
                 
     }
-    //void salvarpersonagens();
+
+    public HashMap<String, capitulo> carregarCapitulos(String caminho, Map<String, personagem> personagens,
+            Scanner escaneadordoconsole) {
+        HashMap<String, capitulo> capitulos = new HashMap<String, capitulo>();
+                
+        File arquivo = new File(caminho);
+        try {
+            Scanner escaneadordearquivo = new Scanner(arquivo,"UTF-8");
+            System.out.println("Carregando capitulos...");
+            String linha = escaneadordearquivo.nextLine();
+            while (escaneadordearquivo.hasNextLine()) {
+
+                if (linha.equals("CAPITULO") ||
+                linha.equals("CAPITULO_COM_IMAGEM")){
+                    escaneadordearquivo.nextLine();
+                    String id = escaneadordearquivo.nextLine();
+
+                    if (linha.equals("CAPITULO"))
+                    {
+                        capitulos.put(id, new capitulo(personagens, escaneadordoconsole, escaneadordearquivo));
+                    } 
+                    else if (linha.equals("ESCOLHA"))
+                    {
+                        LerEscolha(capitulos, escaneadordearquivo);
+                    }
+                    System.out.println("Capitulo " + id);
+                    escaneadordearquivo.nextLine();
+
+                    } else if (linha.equals("ESCOLHA")) {
+                        LerEscolha(capitulos, escaneadordearquivo);
+                }
+                linha=escaneadordearquivo.nextLine();
+                }   
+                escaneadordearquivo.close();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                return capitulos;
+            }
+            private void LerEscolha(HashMap<String, capitulo> capitulos, Scanner escaneadordearquivo) {
+                escaneadordearquivo.nextLine();
+                String idCapituloDe = escaneadordearquivo.nextLine();
+                escaneadordearquivo.nextLine();
+                String idCapituloPara = escaneadordearquivo.nextLine();
+                escaneadordearquivo.nextLine();
+                String textoDigitado = escaneadordearquivo.nextLine();
+                escaneadordearquivo.nextLine();
+                String textoMostrado = escaneadordearquivo.nextLine();
+
+                capitulos.get(idCapituloDe)
+                .adicionarescolha(new escolha(textoDigitado, textoMostrado, capitulos.get(idCapituloPara)));
+            }
 }
+
+                
