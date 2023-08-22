@@ -1,6 +1,6 @@
 CAPITULO
 ID
-Capitulo1
+1
 PERSONAGENS
 jogador
 TEXTO
@@ -14,7 +14,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-Capitulo2
+2
 PERSONAGENS
 jogador
 TEXTO
@@ -26,7 +26,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-Capitulo3
+3
 PERSONAGENS
 jogador
 TEXTO
@@ -39,7 +39,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-Capitulo4
+4
 PERSONAGENS
 jogador
 TEXTO
@@ -50,7 +50,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-Capitulo5
+5
 PERSONAGENS
 jogador
 TEXTO
@@ -60,7 +60,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-Capitulo6
+6
 PERSONAGENS
 jogador
 TEXTO
@@ -71,7 +71,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-Capitulo7
+7
 PERSONAGENS
 jogador
 TEXTO
@@ -82,7 +82,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-Capitulo8
+8
 PERSONAGENS
 jogador
 TEXTO
@@ -95,7 +95,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-Capitulo9
+9
 PERSONAGENS
 jogador
 TEXTO
@@ -106,7 +106,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-Capitulo10
+10
 PERSONAGENS
 jogador
 TEXTO
@@ -116,7 +116,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-Capitulo11
+11
 PERSONAGENS
 jogador
 TEXTO
@@ -126,90 +126,90 @@ VARIACOESHabilidade
 +0
 
 ESCOLHA
-De
-capitulo1
+ORIGEM
+1
 PARA
-capitulo2
+2
 TEXTODIGITADO
 a
 TEXTOMOSTRADO
 Nautico
 
 ESCOLHA
-DE
-capitulo1
+ORIGEM
+1
 PARA
-capitulo7
+7
 TEXTO DIGITADO
 b
 TEXTO MOSTRADO
 Sport
 
 ESCOLHA
-DE
-capitulo2
+ORIGEM
+2
 PARA
-capitulo3
+3
 TEXTO DIGITADO
 a
 TEXTO MOSTRADO
 Treinar
 
 ESCOLHA
-DE
-capitulo7
+ORIGEM
+7
 PARA
-CAPITULO8
+8
 TEXTO DIGITADO
 a
 TEXTO MOSTRADO
 Treinar
 
 ESCOLHA
-DE
-capitulo3
+ORIGEM
+3
 PARA
-capitulo4
+4
 TEXTO DIGITADO
 a
 TEXTO MOSTRADO
 esquerdo
 
 ESCOLHA
-DE
-capitulo8
+ORIGEM
+8
 PARA
-capitulo9
+9
 TEXTO DIGITADO
 a
 TEXTO MOSTRADO
 esquerdo
 
 ESCOLHA
-DE
-capitulo3
+ORIGEM
+3
 PARA
-capitulo5
+5
 TEXTO DIGITADO
 a
 TEXTO MOSTRADO
 direito
 
 ESCOLHA
-DE
-capitulo8
+ORIGEM
+8
 PARA
-capitulo10
+10
 TEXTO DIGITADO
 b
 TEXTO MOSTRADO
 direito
 
 ESCOLHA
-DE
-capitulo7
+ORIGEM
+7
 PARA
-capitulo11
+11
 TEXTO DIGITADO
 b
 TEXTO MOSTRADO
