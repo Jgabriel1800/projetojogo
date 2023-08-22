@@ -13,12 +13,25 @@ public class capitulo {
         this.texto = "";
         this.escolhas = new ArrayList<escolha>();
     }
-    public capitulo(Map<String, personagem> personagens, Scanner escaneadordoconsole, Scanner escaneadordearquivo)  {
-        this.LerCapitulo(personagens, escaneadordearquivo);
-        this.escaneador = escaneadordoconsole;
-        this.escolhas = new ArrayList<escolha>();
+
+    public capitulo(String texto, personagem jogador, int habilidade, Scanner escaneador)  {
+        this.texto=texto;
+        this.jogador=jogador;
+        this.habilidade=habilidade;
+        this.escaneador=escaneador;
+        this.escolhas=new ArrayList<escolha>();
+    
     }
-    protected void LerCapitulo(Map<String, personagem> personagens, Scanner escaneadordearquivo) {
+
+    public capitulo(Map<String, personagem> personagens, Scanner escaneadordoconsole,Scanner escaneadordearquivo) 
+    {
+        this.LerCapitulo(personagens,escaneadordearquivo);
+        this.escaneador=escaneadordoconsole;
+        this.escolhas=new ArrayList<escolha>();
+    }
+    
+    protected void LerCapitulo(Map<String,personagem> personagens, Scanner escaneadordearquivo){ 
+        
         escaneadordearquivo.nextLine();
         String idjogador = escaneadordearquivo.nextLine();
         this.jogador = personagens.get(idjogador);
@@ -26,7 +39,8 @@ public class capitulo {
         escaneadordearquivo.nextLine();
         String linha = escaneadordearquivo.nextLine();
         this.texto = "";
-        while (!linha.equals("VARIACOES")) {
+        while (!linha.equals("VARIACOESHabilidade")) {
+            
             if (linha.equals(idjogador)) {
                 texto = texto + jogador.getNome();
             } else {
@@ -41,6 +55,7 @@ public class capitulo {
     }
     public void executar() {
         mostrar();
+
         if (escolhas.size() > 0) {
             int idcapituloescolhido = escolher();
             System.out.println();
@@ -51,18 +66,24 @@ public class capitulo {
             System.out.println("FIM");
         }
     }
+    
     protected void mostrar() {
         System.out.println(texto);
         jogador.ajustarhabilidade(habilidade);
+
         for (int i = 0; i < escolhas.size(); i++) {
             System.out.println("- " + escolhas.get(i).getTextoMostrado());
         }
+        System.out.println(">>");
     }
+    
     public int escolher() {
         int opcaoescolhida = 0;
-    String escolha;
-    boolean escolhavalida = false;
-    while (!escolhavalida) {
+        String escolha;
+        boolean escolhavalida = false;
+
+        while (!escolhavalida) {
+
         escolha = escaneador.nextLine();
         for (int i = 0; i < escolhas.size(); i++) {
             if (escolha.equalsIgnoreCase(escolhas.get(i).getTextoDigitado())) {
