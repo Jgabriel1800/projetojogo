@@ -1,138 +1,138 @@
 CAPITULO
 ID
-capitulo1
+Capitulo1
 PERSONAGENS
 jogador
 TEXTO
+Fernandinho
 Bem-vindo(a) ao Futegame! Seja um jogador de verdade junto com seu amigo e crie sua carreira rumo ao estrelato.
 Tudo certo, Fernandinho! Agora uma decisão importante.
-Você recebeu propostas de dois diferentes times. Escolha um:
+Você recebeu propostas de dois diferentes times. Escolha um: a-Nautico ou b-Sport
 VARIACOESHabilidade
-0
-0
++0
++0
 
 CAPITULO
 ID
-capitulo2
+Capitulo2
 PERSONAGENS
 jogador
 TEXTO
 Você escolheu o Náutico! Seu amigo Jimmy irá para o Sport.
-Agora, você deseja treinar ou descansar no Náutico?
+Agora, você deseja treinar ou descansar no Náutico? a-Treinar ou b-descansar
 VARIACOESHabilidade
-5
-0
-
++5
++0
 
 CAPITULO
 ID
-capitulo3
+Capitulo3
 PERSONAGENS
 jogador
 TEXTO
 Você escolheu treinar no Náutico. Bom treino!
 Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol.
-Em qual lado você chuta?
+Em qual lado você chuta? a-esquerdo ou b-direito
 VARIACOESHabilidade
-15
-10
++15
++10
 
 CAPITULO
 ID
-capitulo4
+Capitulo4
 PERSONAGENS
 jogador
 TEXTO
 Gooool! Você chutou no lado esquerdo e marcou para o Náutico!
 O Náutico foi campeão do Pernambucano.
 VARIACOESHabilidade
-15
++15
 
 CAPITULO
 ID
-capitulo5
+Capitulo5
 PERSONAGENS
 jogador
 TEXTO
 Chute para fora! Você chutou no lado errado e não marcou, seu time não foi campeão.
 VARIACOESHabilidade
-10
++10
 
 CAPITULO
 ID
-capitulo6
+Capitulo6
 PERSONAGENS
 jogador
 TEXTO
 Você escolheu descansar no Náutico. Aproveite o descanso!
 Você ficou no banco e viu seu time ser campeão sem você.
 VARIACOESHabilidade
-3
++3
 
 CAPITULO
 ID
-capitulo7
+Capitulo7
 PERSONAGENS
 jogador
 TEXTO
-Você escolheu o Sport! Agora, você deseja treinar ou descansar no Sport?
+Você escolheu o Sport! Agora, você deseja treinar ou descansar no Sport? a- Treinar ou b- descansar
 VARIACOESHabilidade
-15
-5
++15
++5
 
 CAPITULO
 ID
-capitulo8
+Capitulo8
 PERSONAGENS
 jogador
 TEXTO
 Você escolheu treinar no Sport, Fernandinho! Bom treino!
 Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol.
-Em qual lado você chuta?
+Em qual lado você chuta? a-esquerdo ou b-direito
 VARIACOESHabilidade
-15
-10
++15
++10
 
 CAPITULO
 ID
-capitulo9
+Capitulo9
 PERSONAGENS
 jogador
 TEXTO
 Gooool! Você chutou no lado esquerdo e marcou para o Sport!
 O Sport foi campeão do Pernambucano.
 VARIACOESHabilidade
-15
++15
 
 CAPITULO
 ID
-capitulo10
+Capitulo10
 PERSONAGENS
 jogador
 TEXTO
 Chute para fora! Você chutou no lado errado e não marcou, seu time não foi campeão.
 VARIACOESHabilidade
-5
++5
 
 CAPITULO
 ID
-capitulo11
+Capitulo11
 PERSONAGENS
 jogador
 TEXTO
 Você escolheu descansar no Sport Recife. Aproveite o descanso!
 Você ficou no banco e viu seu time ser derrotado sem você.
 VARIACOESHabilidade
-0
++0
 
 ESCOLHA
 De
 capitulo1
 PARA
 capitulo2
-TEXTO DIGITADO
+TEXTODIGITADO
 a
-TEXTO MOSTRADO
+TEXTOMOSTRADO
 Nautico
 
 ESCOLHA

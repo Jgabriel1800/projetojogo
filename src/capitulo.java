@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class capitulo {
     private String texto;
-    private ArrayList<escolha> escolhas;
+    protected ArrayList<escolha> escolhas;
     private personagem jogador;
     private int habilidade;
-    private Scanner escaneador;
+    protected Scanner escaneador;
 
     protected capitulo() {
         this.texto = "";
@@ -47,21 +47,26 @@ public class capitulo {
                 texto = texto + linha;
             }
             linha = escaneadordearquivo.nextLine();
+        
         }
         this.habilidade = Integer.parseInt(escaneadordearquivo.nextLine());
+    
     }
-    public void adicionarescolha(escolha escolha) {
+    
+    public void adicionarEscolha(escolha escolha) {
         escolhas.add(escolha);
+    
     }
+    
     public void executar() {
         mostrar();
 
         if (escolhas.size() > 0) {
-            int idcapituloescolhido = escolher();
+            int idCapituloEscolhido = escolher();
             System.out.println();
             System.out.println(". . .");
             System.out.println();
-            escolhas.get(idcapituloescolhido).getProximo().executar();
+            escolhas.get(idCapituloEscolhido).getProximo().executar();
         } else {
             System.out.println("FIM");
         }
@@ -74,11 +79,13 @@ public class capitulo {
         for (int i = 0; i < escolhas.size(); i++) {
             System.out.println("- " + escolhas.get(i).getTextoMostrado());
         }
+        
         System.out.println(">>");
     }
     
     public int escolher() {
-        int opcaoescolhida = 0;
+        
+        int opcaoEscolhida = 0;
         String escolha;
         boolean escolhavalida = false;
 
@@ -88,17 +95,20 @@ public class capitulo {
         for (int i = 0; i < escolhas.size(); i++) {
             if (escolha.equalsIgnoreCase(escolhas.get(i).getTextoDigitado())) {
                 escolhavalida = true;
-                opcaoescolhida = i;
+                opcaoEscolhida = i;
             }
         }
+        
         if (!escolhavalida) {
+           
             System.out.println("Escolha inválida");
         }
+        
     }
-    return opcaoescolhida;
-  }
+    return opcaoEscolhida;
 }
-
+}
+    
 
 
 
