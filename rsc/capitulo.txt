@@ -1,6 +1,6 @@
 CAPITULO
 ID
-capitulo1
+1
 PERSONAGENS
 jogador
 TEXTO
@@ -13,7 +13,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-capitulo2
+2
 PERSONAGENS
 jogador
 TEXTO
@@ -26,7 +26,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-capitulo3
+3
 PERSONAGENS
 jogador
 TEXTO
@@ -39,7 +39,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-capitulo4
+4
 PERSONAGENS
 jogador
 TEXTO
@@ -50,7 +50,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-capitulo5
+5
 PERSONAGENS
 jogador
 TEXTO
@@ -60,7 +60,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-capitulo6
+6
 PERSONAGENS
 jogador
 TEXTO
@@ -71,7 +71,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-capitulo7
+7
 PERSONAGENS
 jogador
 TEXTO
@@ -82,7 +82,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-capitulo8
+8
 PERSONAGENS
 jogador
 TEXTO
@@ -95,7 +95,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-capitulo9
+9
 PERSONAGENS
 jogador
 TEXTO
@@ -106,7 +106,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-capitulo10
+10
 PERSONAGENS
 jogador
 TEXTO
@@ -116,7 +116,7 @@ VARIACOESHabilidade
 
 CAPITULO
 ID
-capitulo11
+11
 PERSONAGENS
 jogador
 TEXTO
@@ -127,9 +127,9 @@ VARIACOESHabilidade
 
 ESCOLHA
 De
-capitulo1
+1
 PARA
-capitulo2
+2
 TEXTO DIGITADO
 a
 TEXTO MOSTRADO
@@ -137,9 +137,9 @@ Nautico
 
 ESCOLHA
 DE
-capitulo1
+1
 PARA
-capitulo7
+7
 TEXTO DIGITADO
 b
 TEXTO MOSTRADO
@@ -147,9 +147,9 @@ Sport
 
 ESCOLHA
 DE
-capitulo2
+2
 PARA
-capitulo3
+3
 TEXTO DIGITADO
 a
 TEXTO MOSTRADO
@@ -157,9 +157,9 @@ Treinar
 
 ESCOLHA
 DE
-capitulo7
+7
 PARA
-CAPITULO8
+8
 TEXTO DIGITADO
 a
 TEXTO MOSTRADO
@@ -167,9 +167,9 @@ Treinar
 
 ESCOLHA
 DE
-capitulo3
+3
 PARA
-capitulo4
+4
 TEXTO DIGITADO
 a
 TEXTO MOSTRADO
@@ -177,9 +177,9 @@ esquerdo
 
 ESCOLHA
 DE
-capitulo8
+8
 PARA
-capitulo9
+9
 TEXTO DIGITADO
 a
 TEXTO MOSTRADO
@@ -187,9 +187,9 @@ esquerdo
 
 ESCOLHA
 DE
-capitulo3
+3
 PARA
-capitulo5
+5
 TEXTO DIGITADO
 a
 TEXTO MOSTRADO
@@ -197,9 +197,9 @@ direito
 
 ESCOLHA
 DE
-capitulo8
+8
 PARA
-capitulo10
+10
 TEXTO DIGITADO
 b
 TEXTO MOSTRADO
@@ -207,9 +207,9 @@ direito
 
 ESCOLHA
 DE
-capitulo7
+7
 PARA
-capitulo11
+11
 TEXTO DIGITADO
 b
 TEXTO MOSTRADO

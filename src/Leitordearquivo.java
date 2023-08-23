@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+
 public class Leitordearquivo {
     public HashMap<String, personagem> carregarpersonagens(String caminho) {
         HashMap<String, personagem> personagens = new HashMap<String, personagem>();
@@ -12,28 +13,22 @@ public class Leitordearquivo {
         try {
             Scanner escaneador = new Scanner(arquivo,"UTF-8");
             
-            System.out.println("Carregando personagens...");
+            System.out.println("Carregando Ações...");
             int i = 0;
             while (escaneador.hasNextLine()) {
                 i++;
                 String id = escaneador.nextLine();
                 String nome = escaneador.nextLine();
                 int habilidade = Integer.parseInt(escaneador.nextLine());
-                
                 escaneador.nextLine();
                 System.out.println("Personagem " + i);
-                
                 personagens.put(id, new personagem(nome, habilidade));
-            
             }
             escaneador.close();
-        
         }catch(FileNotFoundException e){
             e.printStackTrace();
         }
-
-        return personagens;
-                
+        return personagens;  
     }
 
     public HashMap<String, capitulo> carregarCapitulos(String caminho, Map<String, personagem> personagens,
@@ -62,14 +57,14 @@ public class Leitordearquivo {
                     else if (linha.equals("ESCOLHA"))
                     
                     {
-                        LerEscolha(capitulos, escaneadordearquivo);
+                        Lerescolha(capitulos, escaneadordearquivo);
                     }
 
                     System.out.println("Capitulo " + id);
                     escaneadordearquivo.nextLine();
 
                     } else if (linha.equals("ESCOLHA")) {
-                        LerEscolha(capitulos, escaneadordearquivo);
+                        Lerescolha(capitulos, escaneadordearquivo);
                 
                     }
                     linha=escaneadordearquivo.nextLine();
@@ -83,7 +78,7 @@ public class Leitordearquivo {
 
             }
             
-            private void LerEscolha(HashMap<String, capitulo> capitulos, Scanner escaneadordearquivo) {
+            private void Lerescolha(HashMap<String, capitulo> capitulos, Scanner escaneadordearquivo) {
 
                 escaneadordearquivo.nextLine();
                 String idCapituloDe = escaneadordearquivo.nextLine();

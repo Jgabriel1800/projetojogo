@@ -1,6 +1,6 @@
-
 import java.util.Map;
 import java.util.Scanner;
+
 public class Projeto {
 public static void main(String[] args) {
         
@@ -9,14 +9,11 @@ public static void main(String[] args) {
         
         Map<String, personagem> personagens = leitor.carregarpersonagens("rsc/personagem.txt");
         Map<String,capitulo>capitulos=leitor.carregarCapitulos("rsc/capitulo.txt",personagens,escaneador);
-        
-        System.out.println("Carregamento finalizado\n\n...\n\n");
-        
-        capitulo raiz = capitulos.get("capitulo1");
+        System.out.println("Carregamento Concluido\n\n...\n\n");
+        capitulo raiz = capitulos.get("1");
 
         raiz.executar();
         
        escaneador.close();
     }
 }
-

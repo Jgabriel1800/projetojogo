@@ -1,11 +1,9 @@
 public class personagem {
     private String nome;
     private int habilidade;
-    
     public personagem( String nome,int habilidade) {
         this.nome = nome;
-        this.habilidade = habilidade;
-        
+        this.habilidade = habilidade;    
     }
     public personagem(String nome) {
         this.nome = nome;
@@ -14,7 +12,7 @@ public class personagem {
     public void ajustarhabilidade(int variacao) {
         if (variacao != 0) {
           habilidade(this.habilidade + variacao);
-          System.out.println("a habilidade de " + this.nome + " foi para " + this.habilidade);
+          System.out.println("a habilidade atual de " + this.nome + " é: " + this.habilidade);
         }
     }
     public void habilidade(int habilidade) {
