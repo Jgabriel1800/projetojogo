@@ -4,16 +4,15 @@ import java.util.Scanner;
 public class Projeto {
 public static void main(String[] args) {
         
-        Leitordearquivo leitor= new Leitordearquivo();
+        Leitor leitor= new Leitor();
         Scanner escaneador = new Scanner(System.in, "UTF-8");
         
-        Map<String, personagem> personagens = leitor.carregarpersonagens("rsc/personagem.txt");
-        Map<String,capitulo>capitulos=leitor.carregarCapitulos("rsc/capitulo.txt",personagens,escaneador);
-        System.out.println("Carregamento Concluido\n\n...\n\n");
+        Map<String, personagem> personagens = leitor.lerpersonagens("rsc/personagem.txt");
+        Map<String,capitulo>capitulos=leitor.lercapitulos("rsc/capitulo.txt",personagens,escaneador);
+        System.out.println("Vamos começar sua carreira");
         capitulo raiz = capitulos.get("1");
 
         raiz.executar();
-        
        escaneador.close();
     }
 }

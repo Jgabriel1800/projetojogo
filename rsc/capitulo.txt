@@ -1,4 +1,4 @@
-CAPITULO
+PARTE
 ID
 1
 PERSONAGENS
@@ -7,11 +7,11 @@ TEXTO
 Bem-vindo(a) ao Futegame! Seja um jogador de verdade junto com seu amigo e crie sua carreira rumo ao estrelato.
 Tudo certo, Fernandinho! Agora uma decisão importante.
 Você recebeu propostas de dois diferentes times. Escolha um:
-VARIACOESHabilidade
+Variarhabilidade
 0
 0
 
-CAPITULO
+PARTE
 ID
 2
 PERSONAGENS
@@ -19,12 +19,12 @@ jogador
 TEXTO
 Você escolheu o Náutico! Seu amigo Jimmy irá para o Sport.
 Agora, você deseja treinar ou descansar no Náutico?
-VARIACOESHabilidade
+Variarhabilidade
 5
 0
 
 
-CAPITULO
+PARTE
 ID
 3
 PERSONAGENS
@@ -33,7 +33,7 @@ TEXTO
 Você escolheu treinar no Náutico. Bom treino!
 Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol.
 Em qual lado você chuta?
-VARIACOESHabilidade
+Variarhabilidade
 15
 10
 
@@ -45,20 +45,20 @@ jogador
 TEXTO
 Gooool! Você chutou no lado esquerdo e marcou para o Náutico!
 O Náutico foi campeão do Pernambucano.
-VARIACOESHabilidade
+Variarhabilidade
 15
 
-CAPITULO
+PARTE
 ID
 5
 PERSONAGENS
 jogador
 TEXTO
 Chute para fora! Você chutou no lado errado e não marcou, seu time não foi campeão.
-VARIACOESHabilidade
+Variarhabilidade
 10
 
-CAPITULO
+PARTE
 ID
 6
 PERSONAGENS
@@ -66,21 +66,21 @@ jogador
 TEXTO
 Você escolheu descansar no Náutico. Aproveite o descanso!
 Você ficou no banco e viu seu time ser campeão sem você.
-VARIACOESHabilidade
+Variarhabilidade
 3
 
-CAPITULO
+PARTE
 ID
 7
 PERSONAGENS
 jogador
 TEXTO
 Você escolheu o Sport! Agora, você deseja treinar ou descansar no Sport?
-VARIACOESHabilidade
+Variarhabilidade
 15
 5
 
-CAPITULO
+PARTE
 ID
 8
 PERSONAGENS
@@ -89,11 +89,11 @@ TEXTO
 Você escolheu treinar no Sport, Fernandinho! Bom treino!
 Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol.
 Em qual lado você chuta?
-VARIACOESHabilidade
+Variarhabilidade
 15
 10
 
-CAPITULO
+PARTE
 ID
 9
 PERSONAGENS
@@ -101,20 +101,20 @@ jogador
 TEXTO
 Gooool! Você chutou no lado esquerdo e marcou para o Sport!
 O Sport foi campeão do Pernambucano.
-VARIACOESHabilidade
+Variarhabilidade
 15
 
-CAPITULO
+PARTE
 ID
 10
 PERSONAGENS
 jogador
 TEXTO
 Chute para fora! Você chutou no lado errado e não marcou, seu time não foi campeão.
-VARIACOESHabilidade
+Variarhabilidade
 5
 
-CAPITULO
+PARTE
 ID
 11
 PERSONAGENS
@@ -122,96 +122,106 @@ jogador
 TEXTO
 Você escolheu descansar no Sport Recife. Aproveite o descanso!
 Você ficou no banco e viu seu time ser derrotado sem você.
-VARIACOESHabilidade
+Variarhabilidade
 0
 
-ESCOLHA
-De
+DECISAO
+INICIO
 1
-PARA
+ATE
 2
-TEXTO DIGITADO
+TEXTO ESCRITO
 a
-TEXTO MOSTRADO
+TEXTO APRESENTADO
 Nautico
 
-ESCOLHA
-DE
+DECISAO
+INICIO
 1
-PARA
+ATE
 7
-TEXTO DIGITADO
+TEXTO ESCRITO
 b
-TEXTO MOSTRADO
+TEXTO APRESENTADO
 Sport
 
-ESCOLHA
-DE
+DECISAO
+INICIO
 2
-PARA
+ATE
 3
-TEXTO DIGITADO
+TEXTO ESCRITO
 a
-TEXTO MOSTRADO
+TEXTO APRESENTADO
 Treinar
 
-ESCOLHA
-DE
+DECISAO
+INICIO
+2
+ATE
+6
+TEXTO ESCRITO
+b
+TEXTO APRESENTADO
+descansar
+
+DECISAO
+INICIO
 7
-PARA
+ATE
 8
-TEXTO DIGITADO
+TEXTO ESCRITO
 a
-TEXTO MOSTRADO
+TEXTO APRESENTADO
 Treinar
 
-ESCOLHA
-DE
+DECISAO
+INICIO
 3
-PARA
+ATE
 4
-TEXTO DIGITADO
+TEXTO ESCRITO
 a
-TEXTO MOSTRADO
+TEXTO APRESENTADO
 esquerdo
 
-ESCOLHA
-DE
+DECISAO
+INICIO
 8
-PARA
+ATE
 9
-TEXTO DIGITADO
+TEXTO ESCRITO
 a
-TEXTO MOSTRADO
+TEXTO APRESENTADO
 esquerdo
 
-ESCOLHA
-DE
+DECISAO
+INICIO
 3
-PARA
+ATE
 5
-TEXTO DIGITADO
+TEXTO ESCRITO
 a
-TEXTO MOSTRADO
+TEXTO APRESENTADO
 direito
 
-ESCOLHA
-DE
+DECISAO
+INICIO
 8
-PARA
+ATE
 10
-TEXTO DIGITADO
+TEXTO ESCRITO
 b
-TEXTO MOSTRADO
+TEXTO APRESENTADO
 direito
 
-ESCOLHA
-DE
+DECISAO
+INICIO
 7
-PARA
+ATE
 11
-TEXTO DIGITADO
+TEXTO ESCRITO
 b
-TEXTO MOSTRADO
+TEXTO APRESENTADO
 descansar
 

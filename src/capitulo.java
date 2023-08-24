@@ -4,86 +4,88 @@ import java.util.Scanner;
 public class capitulo {
     private String texto;
     private ArrayList<escolha> escolhas;
-    private personagem jogador;
     private int habilidade;
+    private personagem jogador;
     private Scanner escaneador;
-    protected capitulo() {
+    protected capitulo(){
+        this.escolhas = new ArrayList<escolha>();
         this.texto = "";
+    }
+    public capitulo(String texto,personagem jogador, int habilidade, Scanner escaneadorarquivo){
+        this.jogador=jogador;
+        this.texto=texto;
+        this.escaneador=escaneadorarquivo;
+        this.habilidade=habilidade;
         this.escolhas = new ArrayList<escolha>();
     }
-    public capitulo(String texto, personagem jogador, int habilidade, Scanner escaneador)  {
-        this.texto=texto;
-        this.jogador=jogador;
-        this.habilidade=habilidade;
-        this.escaneador=escaneador;
-        this.escolhas=new ArrayList<escolha>();
-    }
-    public capitulo(Map<String, personagem> personagens, Scanner escaneadordoconsole,Scanner escaneadordearquivo) 
-    {
-        this.LerCapitulo(personagens,escaneadordearquivo);
-        this.escaneador=escaneadordoconsole;
-        this.escolhas=new ArrayList<escolha>();
-    }
-    protected void LerCapitulo(Map<String,personagem> personagens, Scanner escaneadordearquivo){ 
-        escaneadordearquivo.nextLine();
-        String idjogador = escaneadordearquivo.nextLine();
-        this.jogador = personagens.get(idjogador);
-        escaneadordearquivo.nextLine();
-        String linha = escaneadordearquivo.nextLine();
-        this.texto = "";
-        while (!linha.equals("VARIACOESHabilidade")) {
-            
-            if (linha.equals(idjogador)) {
-                texto = texto + jogador.getNome();
-            } else {
-                texto = texto + linha;
+    public capitulo(Map<String, personagem> personagens, Scanner escaneadorjogo, Scanner escaneadorarquivo){
+        this.leitorcapitulo(personagens,  escaneadorarquivo);
+        this.escaneador=escaneadorjogo;
+        this.escolhas = new ArrayList<escolha>();
+        }
+        protected void leitorcapitulo(Map<String, personagem> personagens, Scanner escaneadorarquivo){
+          escaneadorarquivo.nextLine();
+          String idjogador=escaneadorarquivo.nextLine();
+            this.jogador=personagens.get(idjogador);
+            escaneadorarquivo.nextLine();
+            String linha=escaneadorarquivo.nextLine();
+            this.texto="";
+            while(!linha.equals("Variarhabilidade")){
+                if(linha.equals(idjogador)){
+
+                    texto=texto + jogador.getNome();
+                }else{
+                    texto=texto+linha;
+                }
+                linha=escaneadorarquivo.nextLine();
+            } 
+            this.habilidade=Integer.parseInt(escaneadorarquivo.nextLine());
             }
-            linha = escaneadordearquivo.nextLine();
-        }
-        this.habilidade = Integer.parseInt(escaneadordearquivo.nextLine());
-    }
-    public void adicionarescolha(escolha escolha) {
-        escolhas.add(escolha);
-    }
-    public void executar() {
-        mostrar();
-        if (escolhas.size() > 0) {
-            int idcapituloescolhido = escolher();
-            System.out.println();
-            System.out.println("Ação sendo executada...");
-            System.out.println();
-            escolhas.get(idcapituloescolhido).getProximo().executar();
-        } else {
-            System.out.println("FIM");
-        }
-    }
-    protected void mostrar() {
-        System.out.println(texto);
-        jogador.ajustarhabilidade(habilidade);
 
-        for (int i = 0; i < escolhas.size(); i++) {
-            System.out.println("- " + escolhas.get(i).getTextoMostrado());
-        }
-    }
-    public int escolher() {
-        int opcaoescolhida = 0;
-        String escolha;
-        boolean escolhavalida = false;
-        while (!escolhavalida) {
-        escolha = escaneador.nextLine();
-        for (int i = 0; i < escolhas.size(); i++) {
-            if (escolha.equalsIgnoreCase(escolhas.get(i).getTextoDigitado())) {
-                escolhavalida = true;
-                opcaoescolhida = i;
+            public void adicionarEscolha(escolha escolha){
+                this.escolhas.add(escolha);
             }
-        }
-        if (!escolhavalida) {
-            System.out.println("Essa escolha não é possivel");
-        }
-    }
-    return opcaoescolhida;
-  }
-}
+            public void executar(){
+                mostrar();
+                if(escolhas.size()>0){
+                    int idescolhido=escolher();
+                    System.out.println();
+                    System.out.println("Aquecendo os jogadores");
+                    System.out.println();
+                    escolhas.get(idescolhido).getProximo().executar();
+             
+                }else{
+                    System.out.println("Fim de jogo");
+                }
+            }
+            private void mostrar(){
+                System.out.println(this.texto);
+                jogador.ajustarhabilidade(habilidade);
+                for(int i=0;i<escolhas.size();i++){
+                    System.out.println((i+1)+"-"+escolhas.get(i).getTextoApresentado());
+                }
+                }
+                public int escolher(){int escolhida=0;
+                    String escolha;
+                    boolean valido=false;
+                    while(!valido){
+                        System.out.println("Escolha uma opção");
+                        escolha=escaneador.nextLine();
+                        
+                        for(int i=0;i<escolhas.size();i++){
+                            if(escolha.equalsIgnoreCase(escolhas.get(i).getTextoEscrito())){
+                                 valido=true;
+                                escolhida=i;
+                              
+                            }
+                        }
+                        if(!valido){
+                            System.out.println("Essa escolha não é possivel");
+                        }
+                    }
+                    return escolhida;
+                }
+            }
+        
 
-
-
+    

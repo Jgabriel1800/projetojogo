@@ -1,24 +1,21 @@
 public class escolha {
-  private String textoDigitado;
-  private String textoMostrado;
-  private capitulo proximo;
+  
+    private capitulo proximo;
+  private String textoEscrito;
+  private String textoApresentado;
 
-  public escolha(String textoDigitado, String textoMostrado, capitulo proximo) {
-    this.textoDigitado = textoDigitado;
-    this.textoMostrado = textoMostrado;
+  public escolha(String textoEscrito, String textoApresentado, capitulo proximo) {
+    this.textoEscrito = textoEscrito;
+    this.textoApresentado = textoApresentado;
     this.proximo = proximo;
   }
-
-  public String getTextoDigitado() {
-    return textoDigitado;
+  public String getTextoEscrito() {
+    return textoEscrito;
   }
-
-  public String getTextoMostrado() {
-    return textoMostrado;
+  public String getTextoApresentado() {
+    return textoApresentado;
   }
-
   public capitulo getProximo() {
     return proximo;
   }
-
 }
