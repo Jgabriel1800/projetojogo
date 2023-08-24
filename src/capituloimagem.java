@@ -28,7 +28,7 @@ private String imagem;
         linha=escaneadorarquivo.nextLine();
         
         
-        while(!linha.equals("FIMDAIMAGEM")){
+        while(!linha.equals("FIMDAIMAGEM.")){
             this.imagem=this.imagem+linha;
             linha=escaneadorarquivo.nextLine();
         }
