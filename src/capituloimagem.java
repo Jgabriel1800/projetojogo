@@ -24,7 +24,7 @@ private String imagem;
         
         String linha= escaneadorarquivo.nextLine();
         linha=escaneadorarquivo.nextLine();
-        this.imagem="";
+        this.imagem=linha;
         linha=escaneadorarquivo.nextLine();
         
         
