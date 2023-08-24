@@ -39,7 +39,27 @@ public class Leitor {
             System.out.println("Preparando o campo");
             String linha = escaneadorarquivo.nextLine();
 
-            while(escaneadorarquivo.hasNextLine()){
+            while(escaneadorarquivo.hasNextLine())
+            {
+                if(linha.equals("PARTEIMAGEM")){
+                    escaneadorarquivo.nextLine();
+                    String id = escaneadorarquivo.nextLine();
+
+                    if(linha.equals("PARTE")){
+                        capitulos.put(id, new capitulo(personagens, escaneadorjogo, escaneadorarquivo));
+                    }
+                    else if(linha.equals("DECISAO")){
+                        leitorescolhas(capitulos,escaneadorarquivo);
+                    }
+                    
+                    System.out.println("PARTE"+id);
+                    escaneadorarquivo.nextLine();
+                }
+                
+                else if(linha.equals("DECISAO")){
+                    leitorescolhas(capitulos,escaneadorarquivo);
+                }
+
                 if(linha.equals("PARTE")){
                     escaneadorarquivo.nextLine();
                     String id = escaneadorarquivo.nextLine();
@@ -50,21 +70,29 @@ public class Leitor {
                     else if(linha.equals("DECISAO")){
                         leitorescolhas(capitulos,escaneadorarquivo);
                     }
+                    
                     System.out.println("PARTE"+id);
                     escaneadorarquivo.nextLine();
                 }
+                
                 else if(linha.equals("DECISAO")){
                     leitorescolhas(capitulos,escaneadorarquivo);
                 }
+
                 linha = escaneadorarquivo.nextLine();
+            
             }
+
             escaneadorarquivo.close();
+        
         }catch(FileNotFoundException e){
             e.printStackTrace();
         }
+        
         return capitulos;
     }
-    private void leitorescolhas(HashMap<String,capitulo> capitulos, Scanner escaneadorarquivo){
+    
+    public void leitorescolhas(HashMap<String,capitulo> capitulos, Scanner escaneadorarquivo){
         escaneadorarquivo.nextLine();
         String idCapituloInicio = escaneadorarquivo.nextLine();
         
@@ -77,6 +105,8 @@ public class Leitor {
         
         escaneadorarquivo.nextLine();
         String textoApresentado= escaneadorarquivo.nextLine();
+        
         capitulos.get(idCapituloInicio).adicionarEscolha(new escolha(textoEscrito,textoApresentado,capitulos.get(idCapituloAte)));
     }
+
 }

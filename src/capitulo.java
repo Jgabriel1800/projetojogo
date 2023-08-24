@@ -3,7 +3,7 @@ import java.util.Map;
 import java.util.Scanner;
 public class capitulo {
     private String texto;
-    private ArrayList<escolha> escolhas;
+    protected ArrayList<escolha> escolhas;
     private int habilidade;
     private personagem jogador;
     private Scanner escaneador;
@@ -19,11 +19,11 @@ public class capitulo {
         this.escolhas = new ArrayList<escolha>();
     }
     public capitulo(Map<String, personagem> personagens, Scanner escaneadorjogo, Scanner escaneadorarquivo){
-        this.leitorcapitulo(personagens,  escaneadorarquivo);
+        this.ler(personagens,  escaneadorarquivo);
         this.escaneador=escaneadorjogo;
         this.escolhas = new ArrayList<escolha>();
         }
-        protected void leitorcapitulo(Map<String, personagem> personagens, Scanner escaneadorarquivo){
+        protected void ler(Map<String, personagem> personagens, Scanner escaneadorarquivo){
           escaneadorarquivo.nextLine();
           String idjogador=escaneadorarquivo.nextLine();
             this.jogador=personagens.get(idjogador);
@@ -58,7 +58,7 @@ public class capitulo {
                     System.out.println("Fim de jogo");
                 }
             }
-            private void mostrar(){
+            public void mostrar(){
                 System.out.println(this.texto);
                 jogador.ajustarhabilidade(habilidade);
                 for(int i=0;i<escolhas.size();i++){
