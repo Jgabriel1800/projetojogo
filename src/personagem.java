@@ -13,7 +13,7 @@ public void ajustarhabilidade(int atualizacao) {
     if(atualizacao !=0){
         this.habilidade += atualizacao;
         System.out.println("Habilidade atualizada para "+this.habilidade);
-    } 
+    }
     }
     public void habilidade(int habilidade) {
         this.habilidade = habilidade;

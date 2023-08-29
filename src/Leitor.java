@@ -32,6 +32,8 @@ public class Leitor {
         return personagens;
     }
 
+    
+   
     public HashMap<String, capitulo> lercapitulos(String caminho, Map<String, personagem> personagens,
             Scanner escaneadordoconsole) {
             HashMap<String, capitulo> capitulos = new HashMap<String, capitulo>();
@@ -46,42 +48,32 @@ public class Leitor {
             while (escaneadordearquivo.hasNextLine()) {
 
                 if (linha.equals("PARTE") ||
-                    
-                    linha.equals("PARTEIMAGEM")){
-                    
-                    escaneadordearquivo.nextLine();
-                    String id = escaneadordearquivo.nextLine();
+            linha.equals("PARTEIMAGEM")){
+                escaneadordearquivo.nextLine();
+                String id = escaneadordearquivo.nextLine();
 
-                    if (linha.equals("PARTE"))
-                    {
-                        capitulos.put(id, new capitulo(personagens, escaneadordoconsole, escaneadordearquivo));
-                    }
-                    else if (linha.equals("DECISAO"))
-                    
-                    {
-                        Lerescolha(capitulos, escaneadordearquivo);
-                    }
-
-                    System.out.println("Capitulo " + id);
-                    escaneadordearquivo.nextLine();
-
-                    } else if (linha.equals("DECISAO")) {
-                        Lerescolha(capitulos, escaneadordearquivo);
-                
-                    }
-                    linha=escaneadordearquivo.nextLine();
+                if(linha.equals("PARTE")){
+                    capitulos.put(id, new capitulo(personagens, escaneadordoconsole, escaneadordearquivo));
                 }
-                escaneadordearquivo.close();
-
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
+                else if (linha.equals("DECISAO")) {
+                    Leitorescolha(capitulos, escaneadordearquivo);
                 }
+      
+                System.out.println("Capitulo " + id);
 
-                return capitulos;
-
+                escaneadordearquivo.nextLine();
+            } else if (linha.equals("DECISAO")) {
+                Leitorescolha(capitulos, escaneadordearquivo); }
+                linha = escaneadordearquivo.nextLine();
             }
+            escaneadordearquivo.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();}
+            return capitulos;
+        }
             
-            private void Lerescolha(HashMap<String, capitulo> capitulos, Scanner escaneadordearquivo) {
+            
+private void Leitorescolha(HashMap<String, capitulo> capitulos, Scanner escaneadordearquivo) {
 
                 escaneadordearquivo.nextLine();
                 String idCapituloInicio = escaneadordearquivo.nextLine();
@@ -91,10 +83,10 @@ public class Leitor {
                 String textoEscrito = escaneadordearquivo.nextLine();
                 escaneadordearquivo.nextLine();
                 String textoApresentado = escaneadordearquivo.nextLine();
-
+            
                 capitulos.get(idCapituloInicio)
-                .adicionarEscolha(new escolha(textoEscrito, textoApresentado, capitulos.get(idCapituloAte)));
-            }
+                    .adicionarEscolha(new escolha(textoEscrito, textoApresentado, capitulos.get(idCapituloAte)));
+}
 }
 
                 

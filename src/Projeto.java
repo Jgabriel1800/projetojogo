@@ -10,6 +10,7 @@ public static void main(String[] args) {
         Map<String, personagem> personagens = leitor.lerpersonagens("rsc/personagem.txt");
         Map<String,capitulo>capitulos=leitor.lercapitulos("rsc/capitulo.txt",personagens,escaneador);
         System.out.println("Vamos começar sua carreira");
+        
         capitulo raiz = capitulos.get("1");
 
         raiz.executar();

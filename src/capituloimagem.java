@@ -2,40 +2,41 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class capituloimagem extends capitulo{
-private String imagem;
+public class capituloimagem extends capitulo {
+    private String imagem;
 
-    
-    public capituloimagem(HashMap<String, personagem> personagens, Scanner escaneadorjogo, Scanner escaneadorarquivo)
-    {
-        this.ler(personagens,  escaneadorarquivo);
-        this.escolhas= new ArrayList<escolha>();
+    public capituloimagem(String texto, personagem jogador, int habilidade, Scanner escaneadorarquivo) {
+        super(texto, jogador, habilidade, escaneadorarquivo);
+        this.imagem = lerImagem(escaneadorarquivo);
     }
-    public void mostrar(){
+
+    public capituloimagem(HashMap<String, personagem> personagens, Scanner escaneadorjogo, Scanner escaneadorarquivo) {
+        super.ler(personagens, escaneadorarquivo);
+        this.imagem = lerImagem(escaneadorarquivo);
+        this.escolhas = new ArrayList<escolha>();
+    }
+
+    public void mostrar() {
         System.out.println();
         System.out.println(imagem);
         System.out.println();
         super.mostrar();
-        
     }
 
-    protected void ler(HashMap<String, personagem> personagens,Scanner escaneadorarquivo)
-    {
+    protected void ler(HashMap<String, personagem> personagens, Scanner escaneadorarquivo) {
+        super.ler(personagens, escaneadorarquivo);
+        this.imagem = lerImagem(escaneadorarquivo);
+    }
+
+    private String lerImagem(Scanner escaneadorarquivo) {
+        StringBuilder imagemBuilder = new StringBuilder();
+        String linha = escaneadorarquivo.nextLine();
         
-        String linha= escaneadorarquivo.nextLine();
-        linha=escaneadorarquivo.nextLine();
-        this.imagem=linha;
-        linha=escaneadorarquivo.nextLine();
-        
-        
-        while(!linha.equals("FIMDAIMAGEM.")){
-            this.imagem=this.imagem+linha;
-            linha=escaneadorarquivo.nextLine();
+        while (!linha.equals("FIMDAIMAGEM.")) {
+            imagemBuilder.append(linha).append("\n");
+            linha = escaneadorarquivo.nextLine();
         }
-        super.ler(personagens,escaneadorarquivo);
+        
+        return imagemBuilder.toString();
     }
 }
-
-
-    
-
