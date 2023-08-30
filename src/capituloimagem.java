@@ -2,41 +2,49 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class capituloimagem extends capitulo {
+public class capituloimagem extends capitulo{
     private String imagem;
 
-    public capituloimagem(String texto, personagem jogador, int habilidade, Scanner escaneadorarquivo) {
-        super(texto, jogador, habilidade, escaneadorarquivo);
-        this.imagem = lerImagem(escaneadorarquivo);
+
+
+    public capituloimagem(HashMap<String, personagem> personagens, Scanner escaneadorjogo, Scanner escaneadorarquivo)
+    {
+       super();
+       this.ler(personagens, escaneadorarquivo);
+       this.escaneador=escaneadorjogo;
+       this.escolhas=new ArrayList<escolha>();
     }
 
-    public capituloimagem(HashMap<String, personagem> personagens, Scanner escaneadorjogo, Scanner escaneadorarquivo) {
+    public capituloimagem(capitulo capitulo, String imagem)
+    {
+        this.imagem=imagem;
+        this.texto=capitulo.texto;
+        this.habilidade=capitulo.habilidade;
+        this.jogador=capitulo.jogador;
+        this.escolhas=capitulo.escolhas;
+        this.escaneador=capitulo.escaneador;
+    }
+
+
+
+
+    protected void ler(HashMap<String, personagem> personagens,Scanner escaneadorarquivo)
+    {
         super.ler(personagens, escaneadorarquivo);
-        this.imagem = lerImagem(escaneadorarquivo);
-        this.escolhas = new ArrayList<escolha>();
-    }
-
-    public void mostrar() {
-        System.out.println();
-        System.out.println(imagem);
-        System.out.println();
-        super.mostrar();
-    }
-
-    protected void ler(HashMap<String, personagem> personagens, Scanner escaneadorarquivo) {
-        super.ler(personagens, escaneadorarquivo);
-        this.imagem = lerImagem(escaneadorarquivo);
-    }
-
-    private String lerImagem(Scanner escaneadorarquivo) {
-        StringBuilder imagemBuilder = new StringBuilder();
-        String linha = escaneadorarquivo.nextLine();
-        
-        while (!linha.equals("FIMDAIMAGEM.")) {
-            imagemBuilder.append(linha).append("\n");
-            linha = escaneadorarquivo.nextLine();
+        escaneadorarquivo.nextLine();
+        String linha=escaneadorarquivo.nextLine();
+        this.imagem="";
+        if(linha.equals("IMAGEM")){
+            while(!linha.equals("FIM")){
+                this.imagem= imagem+ "\n" + linha;
+                linha=escaneadorarquivo.nextLine();
+            }
         }
-        
-        return imagemBuilder.toString();
+    }
+    protected void mostrar(){
+        System.out.println();
+        System.out.println("...............");
+        System.out.println(this.imagem);
+        super.mostrar();
     }
 }

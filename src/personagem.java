@@ -2,6 +2,7 @@ public class personagem {
 private String nome;
 private int habilidade;
 public personagem(String nome, int habilidade) {
+    
     this.nome = nome;
     this.habilidade = habilidade;   
 }
@@ -11,6 +12,7 @@ public personagem(String nome) {
 }
 public void ajustarhabilidade(int atualizacao) {
     if(atualizacao !=0){
+        
         this.habilidade += atualizacao;
         System.out.println("Habilidade atualizada para "+this.habilidade);
     }

@@ -1,30 +1,4 @@
 PARTEIMAGEM
-IMAGEM:
-
-
-                    ##########
-                ####################
-            ######    ########    ####
-          ####          ##            ##
-          ##                            ##
-        ####                          ######
-        ######          ####          ######
-      ########        ########        ######
-      ######      ##############      ######
-      ####        ##############          ####
-      ##            ############          ####
-      ##            ############          ##
-        ##          ##########            ##
-        ##                                ##
-        ####                            ##
-          ########              ##########
-            ########            ########
-              ######            ######
-                ##################
-                        ####
-
-
-FIMDAIMAGEM.
 ID
 1
 PERSONAGENS
@@ -36,18 +10,15 @@ Você recebeu propostas de dois diferentes times. Escolha um:
 Variarhabilidade
 0
 0
+IMAGEM
+  / ____|/ __ \| |      | | |
+ | |  __| |  | | |      | | |
+ | | |_ | |  | | |      | | |
+ | |__| | |__| | |____  |_|_|
+  \_____|\____/|______| (_)_
+FIM
 
-PARTEIMAGEM
-IMAGEM:
-
-  _   _         _    _ _______ _____ _____ ____
- | \ | |   /\  | |  | |__   __|_   _/ ____/ __ \
- |  \| |  /  \ | |  | |  | |    | || |   | |  | |
- | . ` | / /\ \| |  | |  | |    | || |   | |  | |
- | |\  |/ ____ \ |__| |  | |   _| |_ |____ |__| |
- |_| \_/_/    \_\____/   |_|  |_____\_____\____/
-
-
+PARTE
 ID
 2
 PERSONAGENS
@@ -58,7 +29,6 @@ Agora, você deseja treinar ou descansar no Náutico?
 Variarhabilidade
 5
 0
-
 
 PARTE
 ID
@@ -73,17 +43,7 @@ Variarhabilidade
 15
 10
 
-PARTEIMAGEM
-IMAGEM:
-
-   _____  ____  _        _ _
-  / ____|/ __ \| |      | | |
- | |  __| |  | | |      | | |
- | | |_ | |  | | |      | | |
- | |__| | |__| | |____  |_|_|
-  \_____|\____/|______| (_)_
-
-
+CAPITULO
 ID
 4
 PERSONAGENS
@@ -93,6 +53,7 @@ Gooool! Você chutou no lado esquerdo e marcou para o Náutico!
 O Náutico foi campeão do Pernambucano.
 Variarhabilidade
 15
+0
 
 PARTE
 ID
@@ -103,6 +64,7 @@ TEXTO
 Chute para fora! Você chutou no lado errado e não marcou, seu time não foi campeão.
 Variarhabilidade
 10
+0
 
 PARTE
 ID
@@ -114,18 +76,9 @@ Você escolheu descansar no Náutico. Aproveite o descanso!
 Você ficou no banco e viu seu time ser campeão sem você.
 Variarhabilidade
 3
+0
 
-PARTEIMAGEM
-IMAGEM:
-
-   _____ _____   ____  _____ _______
-  / ____|  __ \ / __ \|  __ \__   __|
- | (___ | |__) | |  | | |__ | | |
-  \___ \|  ___/| |  | |  _  /  | |
-  ____ | |    | |__| | | \ \  | |
- |_____/|_|     \____/|_|  \_\ |_|
-
-
+PARTE
 ID
 7
 PERSONAGENS
@@ -149,17 +102,7 @@ Variarhabilidade
 15
 10
 
-PARTEIMAGEM
-IMAGEM:
-
- _____  ____  _        _ _
-  / ____|/ __ \| |      | | |
- | |  __| |  | | |      | | |
- | | |_ | |  | | |      | | |
- | |__| | |__| | |____  |_|_|
-  \_____|\____/|______| (_)_
-  
-
+PARTE
 ID
 9
 PERSONAGENS
@@ -169,6 +112,7 @@ Gooool! Você chutou no lado esquerdo e marcou para o Sport!
 O Sport foi campeão do Pernambucano.
 Variarhabilidade
 15
+0
 
 PARTE
 ID
@@ -179,6 +123,7 @@ TEXTO
 Chute para fora! Você chutou no lado errado e não marcou, seu time não foi campeão.
 Variarhabilidade
 5
+0
 
 PARTE
 ID
@@ -189,6 +134,7 @@ TEXTO
 Você escolheu descansar no Sport Recife. Aproveite o descanso!
 Você ficou no banco e viu seu time ser derrotado sem você.
 Variarhabilidade
+0
 0
 
 DECISAO
@@ -290,3 +236,4 @@ TEXTO ESCRITO
 b
 TEXTO APRESENTADO
 descansar
+

@@ -2,7 +2,3 @@ jogador
 Fernandinho
 0
 
-amigo
-Jimmy
-0
-

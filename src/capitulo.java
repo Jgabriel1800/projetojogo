@@ -2,11 +2,11 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
 public class capitulo {
-    private String texto;
+    protected String texto;
     protected ArrayList<escolha> escolhas;
-    private int habilidade;
-    private personagem jogador;
-    private Scanner escaneador;
+    protected int habilidade;
+    protected personagem jogador;
+    protected Scanner escaneador;
     protected capitulo(){
         this.escolhas = new ArrayList<escolha>();
         this.texto = "";
@@ -58,7 +58,7 @@ public class capitulo {
                     System.out.println("Fim de jogo");
                 }
             }
-            public void mostrar(){
+            protected void mostrar(){
                 System.out.println(this.texto);
                 jogador.ajustarhabilidade(habilidade);
                 for(int i=0;i<escolhas.size();i++){
