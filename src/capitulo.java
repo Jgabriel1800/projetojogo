@@ -38,7 +38,7 @@ public class capitulo {
                     texto=texto+linha;
                 }
                 linha=escaneadorarquivo.nextLine();
-            } 
+            }
             this.habilidade=Integer.parseInt(escaneadorarquivo.nextLine());
             }
 
@@ -53,7 +53,6 @@ public class capitulo {
                     System.out.println("Aquecendo os jogadores");
                     System.out.println();
                     escolhas.get(idescolhido).getProximo().executar();
-             
                 }else{
                     System.out.println("Fim de jogo");
                 }
@@ -74,9 +73,8 @@ public class capitulo {
                         
                         for(int i=0;i<escolhas.size();i++){
                             if(escolha.equalsIgnoreCase(escolhas.get(i).getTextoEscrito())){
-                                 valido=true;
+                                valido=true;
                                 escolhida=i;
-                              
                             }
                         }
                         if(!valido){

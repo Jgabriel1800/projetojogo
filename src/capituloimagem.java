@@ -27,7 +27,6 @@ public class capituloimagem extends capitulo{
 
 
 
-
     protected void ler(HashMap<String, personagem> personagens,Scanner escaneadorarquivo)
     {
         super.ler(personagens, escaneadorarquivo);

@@ -6,7 +6,7 @@ jogador
 TEXTO
 Bem-vindo(a) ao Futegame! Seja um jogador de verdade junto com seu amigo e crie sua carreira rumo ao estrelato.
 Tudo certo, Fernandinho! Agora uma decisão importante.
-Você recebeu propostas de dois diferentes times. Escolha um:
+Você recebeu propostas de dois diferentes times. Escolha um: A-NAUTICO ou B-SPORT
 Variarhabilidade
 0
 0
@@ -18,18 +18,26 @@ IMAGEM
   \_____|\____/|______| (_)_
 FIM
 
-PARTE
+PARTEIMAGEM
 ID
 2
 PERSONAGENS
 jogador
 TEXTO
 Você escolheu o Náutico! Seu amigo Jimmy irá para o Sport.
-Agora, você deseja treinar ou descansar no Náutico?
+Agora, você deseja treinar ou descansar no Náutico? A-TREINAR ou B-DESCANSAR
 Variarhabilidade
 5
 0
-
+IMAGEM
+  _   _         _    _ _______ _____ _____ ____
+ | \ | |   /\  | |  | |__   __|_   _/ ____/ __ \
+ |  \| |  /  \ | |  | |  | |    | || |   | |  | |
+ | . ` | / /\ \| |  | |  | |    | || |   | |  | |
+ | |\  |/ ____ \ |__| |  | |   _| |_ |____ |__| |
+ |_| \_/_/    \_\____/   |_|  |_____\_____\____/
+FIM
+                                                 
 PARTE
 ID
 3
@@ -38,7 +46,7 @@ jogador
 TEXTO
 Você escolheu treinar no Náutico. Bom treino!
 Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol.
-Em qual lado você chuta?
+Em qual lado você chuta? A-ESQUERDO ou B-DIREITO
 Variarhabilidade
 15
 10
@@ -78,17 +86,25 @@ Variarhabilidade
 3
 0
 
-PARTE
+PARTEIMAGEM
 ID
 7
 PERSONAGENS
 jogador
 TEXTO
-Você escolheu o Sport! Agora, você deseja treinar ou descansar no Sport?
+Você escolheu o Sport! Agora, você deseja treinar ou descansar no Sport? A-TREINAR ou B-DESCANSAR
 Variarhabilidade
 15
 5
-
+IMAGEM
+   _____ _____   ____  _____ _______
+  / ____|  __ \ / __ \|  __ \__   __|
+ | (___ | |__) | |  | | |__ | | |
+  \___ \|  ___/| |  | |  _  /  | |
+  ____ | |    | |__| | | \ \  | |
+ |_____/|_|     \____/|_|  \_\ |_|
+FIM
+                                     
 PARTE
 ID
 8
@@ -97,7 +113,7 @@ jogador
 TEXTO
 Você escolheu treinar no Sport, Fernandinho! Bom treino!
 Você vai ser titular na partida final e no último minuto tem a chance de chutar no gol.
-Em qual lado você chuta?
+Em qual lado você chuta? A-ESQUERDO ou B-DIREITO
 Variarhabilidade
 15
 10
